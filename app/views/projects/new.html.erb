@@ -1,0 +1,17 @@
+<h1>Add a Project</h1>
+
+<%= form_for @project do |p| %>
+
+  <p>
+    <%= p.label :name %>
+    <%= p.text_field :name %>
+  </p>
+  
+  <p>
+    <%= p.label :link %>
+    <%= p.text_field :link %>
+  </p>
+  
+  <%= p.submit %>
+  
+<% end %>
