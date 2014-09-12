@@ -1,0 +1,12 @@
+<h1>List of Projects</h1>
+
+<% if @projects.empty? %>
+  <p><%= "No projects listed" %></p>
+<% else %>
+  <% @projects.each do |a| %>
+    <p><%= link_to(a.title, a.link)%></p>
+  <% end %>
+<% end %>
+
+
+<%= link_to("Add a new Project", new_project_path) %>
