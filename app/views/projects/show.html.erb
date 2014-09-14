@@ -1,0 +1,18 @@
+<h1>Project Information</h1>
+
+
+
+<h2><%= @project.name %></h2>
+
+<p>
+  <%= @project.description %>
+</p>
+
+
+<body>
+  <%= link_to("Github", @project.link) %> |
+  <%= link_to("Edit", edit_project_path(@project.id)) %>
+</body>
+
+<p>
+  <%= link_to("Home", projects_path) %>

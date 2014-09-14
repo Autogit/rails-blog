@@ -4,7 +4,10 @@
   <p><%= "No projects listed" %></p>
 <% else %>
   <% @projects.each do |a| %>
-    <p><%= link_to(a.name, a.link)%> | <%= link_to 'Destroy', project_path(a.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p>
+      <%= link_to(a.name, project_path(a.id))%> | 
+      <%= link_to 'Destroy', project_path(a.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
   <% end %>
 <% end %>
 
